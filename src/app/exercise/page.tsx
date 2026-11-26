@@ -1,0 +1,16 @@
+export default function Exercise() {
+  return <main className="exercise-page"><a href="/">← Back to the workspace</a><p className="eyebrow">ilenHR · BUILD EXERCISE</p><h1>Give time off a clear path.</h1><p className="intro">Complete a small leave-request workflow on top of a working starter. We want to understand how you build, make decisions, and work with AI.</p>
+    <p><strong>Timebox: about three hours.</strong> Agree on the submission date with your interviewer. Stop at the timebox and explain unfinished work. There are no deliberately planted bugs.</p>
+    <h2>What already works</h2><p>Five fictional employees, two managers, a directory, a demo identity switcher, and private draft creation and editing backed by SQLite. Dates can be blank in a draft. The starter has no submitted requests or approval lifecycle.</p>
+    <h2>Your tasks</h2><ol>
+      <li><strong>Submit valid requests.</strong> Require a leave type and real start/end dates, with start on or before end. Use inclusive calendar dates and reject overlaps with the same employee’s pending or approved requests. Drafts, rejected requests, and withdrawn requests do not block dates.</li>
+      <li><strong>Review as the assigned manager.</strong> Build an approvals inbox. Only the requester’s assigned manager may approve or reject a pending request. Enforce this in the backend, using the supplied demo identity. Managers cannot approve their own requests.</li>
+      <li><strong>Withdraw pending requests.</strong> Only the owner may withdraw their pending request. Submitted content is immutable; approved, rejected, and withdrawn requests are terminal and cannot be edited or actioned again.</li>
+      <li><strong>Keep a reliable history.</strong> Record the actor, time, and transition from submission onward. Conflicting actions must not both succeed. A status change and its history must persist together, including after an application restart.</li>
+    </ol>
+    <p>Show employees their own requests, managers their assigned pending requests, and authorized viewers each request’s history. A person without an assigned manager cannot submit; explain this in the UI. Use the directory’s manager relationships.</p>
+    <h2>Keep it small</h2><p>Use the supplied Next.js, TypeScript, and SQLite stack. You may change the schema, API, and UI. Skip payroll, leave balances, holiday calculations, email, real authentication, deployment, and mobile apps. The demo switcher deliberately allows impersonation for local evaluation; it is not production security.</p>
+    <h2>What to submit</h2><ul><li>A private repository with a feature branch and pull request against its unchanged starter main branch. Keep your working commit history.</li><li>Evidence for validation, permissions, overlap boundaries, conflicting actions, history consistency, and persistence.</li><li>A completed <code>DECISIONS.md</code> explaining choices, tradeoffs, scope, and questions.</li><li>AI conversations or session logs in <code>transcripts/</code>. AI use is welcome. Explain what you verified or corrected.</li></ul>
+    <p>Read the repository README for setup, API details, and the full acceptance checklist. After submission, we’ll do a 30-minute walkthrough of the implementation and your AI workflow.</p>
+  </main>;
+}
