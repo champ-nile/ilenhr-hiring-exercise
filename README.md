@@ -2,7 +2,7 @@
 
 A working starter for a small HR workflow. Complete the leave-request lifecycle and explain your decisions and AI workflow. There are **no deliberately introduced bugs** and no hidden test suite.
 
-**Timebox:** approximately three hours of implementation. Agree on a submission deadline with your interviewer. Stop at the timebox; document unfinished work rather than spending an unbounded amount of time. A 30-minute walkthrough follows the submission.
+**Timebox:** approximately three hours total, including architecture documentation. Reserve roughly 15–20 minutes for diagrams and explanation. Agree on a submission deadline with your interviewer. Stop at the timebox; document unfinished work rather than spending an unbounded amount of time. A 30-minute walkthrough follows the submission.
 
 ## Start here
 
@@ -73,6 +73,17 @@ Build a flow where employees submit leave requests and their assigned manager re
 - State and history survive app restarts. Display history to authorized viewers.
 - Managers and owners should receive useful UI feedback for validation, authorization, and stale-action errors.
 
+### 5. Architecture with Mermaid
+
+Complete [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) with diagrams of **your implemented solution**:
+
+- A **component diagram** showing the browser UI, backend boundaries, identity/permission checks, persistence, and the main connections between them.
+- A **sequence diagram** following submission or manager review from the UI to the database and back. Include a rejection/conflict path and show the transaction boundary where applicable.
+- A short data-model explanation: entities, relationships, request states, and where your implementation enforces overlap, authorization, and history consistency. An ER diagram is optional.
+- Map the diagrams to real files/functions. Explain one tradeoff and how you would isolate multiple companies in a future version; do not implement that expansion.
+
+Use fenced `mermaid` blocks so GitHub can render the diagrams. The architecture file contains a small example of the **existing starter**, not a proposed solution to the candidate tasks. Replace or extend it, clearly distinguish implemented behavior from future ideas, and be ready to explain the diagrams in the walkthrough. AI may help generate them, but verify that they match your code.
+
 ## Keep the scope small
 
 Do not build leave balances, payroll, holidays, partial days, attachments, notifications, email, real authentication, deployment, or a mobile app. Do not add paid AI dependencies to the product. You may use AI agents to do the implementation.
@@ -90,6 +101,7 @@ The identity switcher **deliberately permits impersonation** to evaluate permiss
 | `src/lib/types.ts` | Shared starter types |
 | `src/app/exercise/page.tsx` | In-app task brief; keep in sync with this README if you change the brief |
 | `src/server/store.test.ts` | Passing starter tests; add your own requirement coverage |
+| `docs/ARCHITECTURE.md` | Required architecture deliverable, prompts, and starter Mermaid example |
 
 Current API:
 
@@ -120,7 +132,7 @@ Do not invent passing results. Explain what you did not verify and why.
 
 1. Create your **own private copy** of the starter and preserve `main` as the starter baseline. If template creation is available, use it; otherwise clone and push into a new private repository. Do not submit a public fork or open a PR against the interviewer’s starter.
 2. Create a feature branch and open a pull request against your own `main`. Keep your working commit history.
-3. Complete `DECISIONS.md`: choices, reasons, alternatives, scope calls, questions, and AI workflow.
+3. Complete `DECISIONS.md` and `docs/ARCHITECTURE.md`: choices, reasons, alternatives, scope calls, questions, AI workflow, and your component/sequence diagrams.
 4. Put AI session transcripts in `transcripts/`, in order. Redact credentials and unrelated private data; explain redactions.
 5. Include requirement evidence and known limitations in your PR. Use `.github/pull_request_template.md`.
 6. Share repository and PR links with your interviewer and grant them access using the GitHub account they provide. Do not publish your submission or transcripts.
