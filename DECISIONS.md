@@ -6,6 +6,10 @@ For each meaningful decision, describe **what you chose**, **why**, an alternati
 
 <!-- Your choices here. -->
 
+## Architecture
+
+<!-- Complete docs/ARCHITECTURE.md with component and sequence Mermaid diagrams. Link it here and explain a key tradeoff. -->
+
 ## Permissions and visibility
 
 ## Overlaps, conflicting actions, and history consistency
