@@ -8,6 +8,7 @@ This rubric is visible to candidates. Review actual evidence and explanations ra
 | Backend boundaries | Identity from the demo context; ownership and assigned-manager checks; private drafts |
 | Persistence | Durable records and evidence from restarts/reopening; documented schema changes |
 | Engineering judgment | Small design, sensible tradeoffs, useful errors, clear scope calls |
+| Architecture | Component and sequence Mermaid diagrams agree with the implementation; clear boundaries, data relationships, conflict path, and code map |
 | Verification | Tests or reproducible evidence for risky cases; honest limitations |
 | AI collaboration | Useful context, iterative prompts, checked output, understanding of the final code |
 
@@ -16,7 +17,7 @@ Mark each area as demonstrated, partially demonstrated, or not yet demonstrated 
 ## 30-minute walkthrough
 
 - 5 minutes: candidate demonstrates employee submission and manager review.
-- 10 minutes: follow one request from UI through backend to storage; discuss overlaps and conflicting actions.
+- 10 minutes: use the candidate's Mermaid diagrams to follow one request from UI through backend to storage; discuss overlaps, conflicting actions, and one tradeoff. Check that the diagrams match the code.
 - 10 minutes: review one productive AI exchange and one correction or verification step.
 - 5 minutes: discuss limitations and what would change for multiple companies or production authentication.
 
